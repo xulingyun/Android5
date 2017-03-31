@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "wc.xulingyun.com.android56"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+//    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    //    compile 'com.hyphenate:hyphenate-sdk:3.2.3'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:animated-vector-drawable:25.3.0'
+    compile 'com.android.support:preference-v14:25.3.0'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    compile 'com.facebook.fresco:fresco:1.1.0'
+    compile 'com.facebook.fresco:drawee:1.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+    compile 'com.lovedise:permissiongen:0.0.6'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //    compile 'com.github.garretyoder:Colorful:1.1'
+    testCompile 'junit:junit:4.12'
+    compile project(':colortheme')
+}

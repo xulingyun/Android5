@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ff0000"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_alignParentTop="true"
+            android:paddingTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_menu_camera"
+            android:id="@+id/team_icon1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_below="@+id/team_icon1"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"
+            tools:text="OMD"
+            android:id="@+id/team1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:id="@+id/match_title"
+            tools:text="2017加急职业联赛"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:id="@+id/match_score"
+            tools:text="0:8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:id="@+id/match_content"
+            tools:text="观看直播"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/colorPressedHighlight"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_alignParentTop="true"
+            android:paddingTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_menu_camera"
+            android:id="@+id/team_icon2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_below="@+id/team_icon2"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"
+            tools:text="OMD"
+            android:id="@+id/team2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

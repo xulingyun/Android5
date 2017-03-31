@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.v4.widget.NestedScrollView-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/backgroundColor"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_search_yellow_200_24dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:hint="@string/findFriend"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/search1"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_group_yellow_200_24dp"
+        android:drawableEnd="@drawable/ic_navigate_next_grey_600_18dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/friendState"/>
+
+    <ExpandableListView
+        android:layout_marginTop="10dp"
+        android:groupIndicator="@null"
+        android:id="@+id/expandableListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000" >
+    </ExpandableListView>
+</LinearLayout>

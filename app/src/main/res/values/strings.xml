@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Android5</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_send">send</string>
+    <string name="match_title">2017甲级职业联赛</string>
+    <string name="my_behavior">wc.xulingyun.com.android56.MyBehavior</string>
+
+
+    <string name="order">+订阅</string>
+    <string name="change_style">请选择你的主题颜色</string>
+
+    <string name="zixun">资讯</string>
+    <string name="findFriend">搜索你的好友</string>
+    <string name="friendState">好友动态</string>
+    <string name="expandable_name">飞翔的泥巴</string>
+    <string name="expandable_name1">流浪的灬鹰</string>
+    <string name="expandable_sex">♂28</string>
+    <string name="expandable_area">诺克萨斯</string>
+    <string name="expandable_chat">聊天</string>
+    <string name="expandable_state">游戏离线</string>
+    <string name="fensi_clib">粉丝俱乐部 ></string>
+
+    <string-array name="firend">
+        <item>好友</item>
+        <item>消息</item>
+    </string-array>
+
+</resources>

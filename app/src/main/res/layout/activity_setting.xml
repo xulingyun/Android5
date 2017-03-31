@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/main_coord"
+    tools:context="wc.xulingyun.com.android56.SettingActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/appbar"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:title="@string/action_send"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="20dp"
+            app:expandedTitleMarginBottom="5dp"
+            app:collapsedTitleGravity="left">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/toolbar_image"
+                app:layout_collapseMode="pin"
+                app:srcCompat="@drawable/pic_day"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:popupTheme="@style/ToolbarPopupTheme"
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:padding="15dp"
+                android:id="@+id/day_night_label"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:text="日夜模式："
+                android:textSize="25sp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+            <android.support.v7.widget.SwitchCompat
+                android:layout_alignParentTop="true"
+                android:padding="15dp"
+                android:textSize="25sp"
+                android:layout_toEndOf="@id/day_night_label"
+                android:id="@+id/day_night"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/day_night_label"
+                android:padding="15dp"
+                android:id="@+id/main_color_label"
+                android:layout_alignParentStart="true"
+                android:text="主    色："
+                android:textSize="25sp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+            <android.support.v7.widget.AppCompatImageView
+                android:padding="15dp"
+                android:layout_below="@id/day_night_label"
+                android:layout_toEndOf="@id/main_color_label"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                app:srcCompat="@drawable/xz"
+                android:id="@+id/main_color"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/main_color_label"
+                android:padding="15dp"
+                android:id="@+id/other_color_label"
+                android:layout_alignParentStart="true"
+                android:text="副    色："
+                android:textSize="25sp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+            <android.support.v7.widget.AppCompatImageView
+                android:padding="15dp"
+                android:layout_below="@id/main_color_label"
+                android:layout_toEndOf="@id/other_color_label"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                app:srcCompat="@drawable/ld"
+                android:id="@+id/other_color"
+                android:layout_height="wrap_content"/>
+
+            <Switch
+                android:layout_below="@id/other_color_label"
+                android:padding="15dp"
+                android:textSize="25sp"
+                android:id="@+id/sss"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        app:layout_behavior=""
+        app:borderWidth="0dp"
+        android:layout_width="wrap_content"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|end"
+        android:src="@drawable/svg_ic_windmill"
+        android:layout_height="wrap_content"/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:background="@drawable/ic_ondemand_video_black_48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:id="@+id/s_head_icon"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:id="@+id/s_title"
+        android:layout_toEndOf="@id/s_head_icon"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_below="@id/s_title"
+        android:layout_width="wrap_content"
+        android:id="@+id/s_author"
+        android:layout_toEndOf="@id/s_head_icon"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_below="@id/s_author"
+        android:layout_width="wrap_content"
+        android:id="@+id/s_content"
+        android:layout_toEndOf="@id/s_head_icon"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:textColor="#d1ae6a"
+        android:text="@string/order"
+        android:padding="10dp"
+        android:background="@drawable/order_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/s_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

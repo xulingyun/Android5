@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/black"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="@drawable/heard_bg"
+                    android:layout_height="180dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/heard_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp">
+
+        </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heard_recycler"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/chat_botton_bg"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/fensi_clib"
+            android:textColor="@color/bottom_select"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/item1_recycler"
+        android:layout_height="120dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/item2_recycler"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

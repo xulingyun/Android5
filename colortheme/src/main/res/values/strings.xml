@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ColorTheme</string>
+    <string name="select_color">选取颜色</string>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_height="match_parent">
+
+
+    <wc.xulingyun.com.android56.view.CircleImageView
+        android:layout_margin="15dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/sc1"
+        android:id="@+id/item_image_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:border_color="@android:color/holo_red_light"
+        app:border_width="1dp"
+        app:border_overlay="true"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/expandable_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/item_image_view"
+        android:maxWidth="350dp"
+        android:text="@string/expandable_name"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_marginStart="5dp"
+        android:id="@+id/expandable_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/expandable_name"
+        android:background="@android:color/holo_blue_bright"
+        android:maxWidth="350dp"
+        android:text="@string/expandable_sex"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/expandable_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expandable_name"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/item_image_view"
+        android:maxWidth="350dp"
+        android:text="@string/expandable_name1"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_marginStart="5dp"
+        android:id="@+id/expandable_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expandable_name"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/expandable_name"
+        android:maxWidth="350dp"
+        android:text="@string/expandable_area"
+        android:textSize="16sp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/expandable_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FCD07E"
+        android:background="@drawable/chat_botton_bg"
+        android:text="@string/expandable_chat"
+        android:padding="6dp"
+        android:textSize="20sp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/expandable_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expandable_chat"
+        android:layout_marginTop="10dp"
+        android:text="@string/expandable_state"
+        android:textSize="12sp"/>
+
+
+
+</RelativeLayout>
