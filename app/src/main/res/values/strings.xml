@@ -29,4 +29,9 @@
         <item>消息</item>
     </string-array>
 
+    <string name="download">下载</string>
+    <string name="complete">完成</string>
+    <string name="running">%1$d %%</string>
+    <string name="stop">暂停</string>
+
 </resources>

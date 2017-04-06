@@ -18,6 +18,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,12 +29,16 @@ import android.widget.CompoundButton;
 import org.polaric.colorful.Colorful;
 import org.polaric.colorful.ColorfulActivity;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import wc.xulingyun.com.android5.R;
 import wc.xulingyun.com.android56.adapter.DialogRecyclerAdapter;
+import wc.xulingyun.com.android56.view.LoadingView;
 
 import static org.polaric.colorful.Colorful.getThemeDelegate;
 
-public class SettingActivity extends ColorfulActivity implements View.OnClickListener,DialogRecyclerAdapter.OnItemLister {
+public class SettingActivity extends ColorfulActivity implements View.OnClickListener,DialogRecyclerAdapter.OnItemLister ,LoadingView.LoadListener{
 
     public static final int MAIN_COLOR = 0;
     public static final int OTHER_COLOR = 1;
@@ -47,6 +52,8 @@ public class SettingActivity extends ColorfulActivity implements View.OnClickLis
     AppCompatImageView toolbar_image;
     SwitchCompat day_night;
     boolean isDark;
+    LoadingView mLoadingView;
+    private Timer timer;
 
     protected void transparentStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -103,6 +110,8 @@ public class SettingActivity extends ColorfulActivity implements View.OnClickLis
         mFab = (FloatingActionButton) findViewById(R.id.fab);
         mFab.setImageDrawable(createDrawable(R.drawable.svg_ic_windmill,Colorful.getThemeDelegate().getPrimaryColor().getColorRes()));
         playFabAnimation();
+        mLoadingView = (LoadingView) findViewById(R.id.test_loading);
+        mLoadingView.setListener(this);
     }
 
     @Override
@@ -228,4 +237,41 @@ public class SettingActivity extends ColorfulActivity implements View.OnClickLis
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+    @Override
+    public void start() {
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                mLoadingView.setProgress(mLoadingView.getProgress()+1);
+            }
+        },100,200);
+    }
+
+    @Override
+    public void stop() {
+        timer.cancel();
+    }
+
+    @Override
+    public void complete(){
+        timer.cancel();
+        Log.e("TAG", "onClick: 完成");
+    }
+
+    @Override
+    public void reStart() {
+        mLoadingView.setProgress(0);
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                mLoadingView.setProgress(mLoadingView.getProgress()+1);
+            }
+        },100,200);
+    }
+
+
 }
