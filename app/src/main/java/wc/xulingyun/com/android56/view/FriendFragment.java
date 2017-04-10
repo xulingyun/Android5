@@ -81,7 +81,7 @@ public class FriendFragment extends BaseFragment {
         });
         listFragment = new ArrayList<>();
         listFragment.add(new FriendHailFellowFragment());
-        listFragment.add(new FriendHailFellowFragment());
+        listFragment.add(new FriendMessageFragment());
         mPagerAdapter = new MainPagerAdapter(getChildFragmentManager(),getActivity(),listFragment);
         mViewPager.setAdapter(mPagerAdapter);
         detailText(firend,message,0);
