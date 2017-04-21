@@ -37,6 +37,7 @@ import wc.xulingyun.com.android56.view.BottomMenu;
 import wc.xulingyun.com.android56.view.FindFragment;
 import wc.xulingyun.com.android56.view.FriendFragment;
 import wc.xulingyun.com.android56.view.MainFragment;
+import wc.xulingyun.com.android56.view.MeFragment;
 
 public class MainActivity extends ColorfulActivity
         implements NavigationView.OnNavigationItemSelectedListener ,DialogRecyclerAdapter.OnItemLister,ToolbarNavigationListen {
@@ -77,9 +78,10 @@ public class MainActivity extends ColorfulActivity
         setContentView(R.layout.activity_main);
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
         listFragment = new ArrayList<>();
-        listFragment.add(new FriendFragment(this));
+
+        listFragment.add(new MeFragment(this));
         listFragment.add(new MainFragment(this));
-        listFragment.add(new FindFragment());
+        listFragment.add(new FriendFragment(this));
         listFragment.add(new FindFragment());
         mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),this,listFragment);
         mViewPager.setAdapter(mPagerAdapter);

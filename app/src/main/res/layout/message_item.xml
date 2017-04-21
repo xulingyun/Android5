@@ -12,31 +12,36 @@
         android:layout_alignParentStart="true"
         android:src="@color/colorPrimaryDark"/>
     <android.support.v7.widget.AppCompatTextView
-        android:gravity="center"
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@id/circle_image_view"
+        android:layout_marginEnd="50dp"
+        android:gravity="center_vertical"
+        android:maxLength="10"
+        android:maxLines="1"
         android:paddingEnd="10dp"
         android:paddingStart="10dp"
         android:textSize="18sp"
-        android:textStyle="bold" tools:text="逆风"/>
+        android:textStyle="bold" tools:text="逆风逆风逆风逆风逆风逆风逆风"/>
     <android.support.v7.widget.AppCompatTextView
-        android:gravity="center"
         android:id="@+id/message_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/name"
+        android:layout_marginEnd="50dp"
         android:layout_toEndOf="@id/circle_image_view"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
         android:paddingEnd="10dp"
         android:paddingStart="10dp"
         android:textSize="16sp"
-        tools:text="带我飞"/>
+        tools:text="带我飞，坑起来"/>
 
     <android.support.v7.widget.AppCompatTextView
-        android:textSize="15sp"
         android:id="@+id/last_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,6 +49,7 @@
         android:layout_alignParentTop="true"
         android:paddingEnd="10dp"
         android:paddingStart="10dp"
+        android:textSize="15sp"
         tools:text="今天"/>
 
 </RelativeLayout>

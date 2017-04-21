@@ -44,7 +44,7 @@ public class FriendMessageFragment extends Fragment {
         list = new ArrayList<>();
         UserInfo userInfo;
         for (int i = 0; i <10 ; i++) {
-            userInfo = new UserInfo();
+            userInfo = new UserInfo("张三开飞机"+i,"","2017-01-10 10:15:15","德玛西亚"+(i*3));
             list.add(userInfo);
         }
     }

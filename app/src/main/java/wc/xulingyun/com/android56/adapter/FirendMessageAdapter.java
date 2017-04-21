@@ -1,15 +1,12 @@
 package wc.xulingyun.com.android56.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import wc.xulingyun.com.android5.R;
 import wc.xulingyun.com.android56.dao.UserInfo;
 
@@ -18,10 +15,11 @@ import wc.xulingyun.com.android56.dao.UserInfo;
  * 描述：
  */
 
-public class FirendMessageAdapter extends RecyclerView.Adapter<FirendMessageAdapter.MyViewHolder> {
+public class FirendMessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     ArrayList<UserInfo> list;
     LayoutInflater mInflater;
+    boolean isEmpty = false;
 
     public FirendMessageAdapter(ArrayList<UserInfo> $List, Context $Context) {
         list = $List;
@@ -29,35 +27,29 @@ public class FirendMessageAdapter extends RecyclerView.Adapter<FirendMessageAdap
     }
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new MyViewHolder(mInflater.inflate(R.layout.message_item,null));
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if(isEmpty){
+            return new MessageEmptyViewHolder(mInflater.inflate(R.layout.message_empty,null));
+        }
+        return new MessageViewHolder(mInflater.inflate(R.layout.message_item,null));
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.message.setText("来撸呀");
-        holder.name.setText("天天一起坑");
-        holder.time.setText("昨天");
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        if(!isEmpty) {
+            ((MessageViewHolder)holder).initData(list,position);
+        }else{
+            ((MessageEmptyViewHolder)holder).initData(null,position);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
-    }
-
-    class MyViewHolder extends RecyclerView.ViewHolder{
-
-        CircleImageView mCircleImageView;
-        AppCompatTextView name;
-        AppCompatTextView message;
-        AppCompatTextView time;
-
-        public MyViewHolder(View itemView) {
-            super(itemView);
-            mCircleImageView = (CircleImageView) itemView.findViewById(R.id.circle_image_view);
-            name = (AppCompatTextView) itemView.findViewById(R.id.name);
-            message = (AppCompatTextView) itemView.findViewById(R.id.message_content);
-            time = (AppCompatTextView) itemView.findViewById(R.id.last_time);
+        if(list==null||list.size()==0){
+            isEmpty = true;
+            return 1;
         }
+        isEmpty = false;
+        return list.size();
     }
 }

@@ -38,7 +38,6 @@ public class HeardRecyclerAdapter extends RecyclerView.Adapter<HeardRecyclerAdap
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Log.e("onBindViewHolder", "onBindViewHolder: "+position);
         holder.mCircleImageView.setImageResource(list.get(position).getBitmapResId());
         holder.mTextView.setText(list.get(position).getName());
     }
